@@ -23,14 +23,14 @@
 <div class="home-page">
 
  <span><div style="text-align:right"><span><a routerLink="/profile">  profile </a> </span><i class="fas fa-user"></i></div> 
- <div style="text-align:right"><span><a routerLink="/like">  messages </a> </span><i class="fas fa-heart"></i></div> </span>
+ <div style="text-align:right"><span><a routerLink="/home">all messages</a>  </span><i class="fas fa-envelope"></i></div> </span>
   <div class="form">
     
-    <h1>All Messages:</h1>
+    <h1>liked Messages:</h1>
     <table id="customers"width ="100%" border="1" style="border-collapse:collapse">
       <th>messages </th>
     <tr *ngFor="let i of Messages">
-      <td style="text-align:left"> {{i.m}} <div style="text-align:right"><i (click)="like()" class="fas fa-heart"></i> <i (click)="deleted()"class="fas fa-trash"> </i></div> </td>
+      <td style="text-align:left"> {{i.m}} </td>
     </tr>
   </table>
   

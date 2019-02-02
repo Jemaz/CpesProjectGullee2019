@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-Messages=[{id:1,m:"fkqjw"},{id:2,m:"jnjnkjw"},{id:3,m:"jnkj"}];
+Messages=[{id:1,m:"i really like the C++ course"},{id:2,m:"very good at time manegment "},{id:3,m:"need more work on slides"}];
+
   constructor() { }
 
   ngOnInit() {
   }
+like(){
+////////////////liked msg
+}
+deleted(){}
+
 
 }

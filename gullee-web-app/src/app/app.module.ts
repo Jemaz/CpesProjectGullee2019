@@ -8,6 +8,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SignComponent } from './sign/sign.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
+import { LikedMessagesComponent } from './liked-messages/liked-messages.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const routs=[
   {
@@ -19,7 +21,11 @@ component:SignupComponent},
 {path:'login',
 component:SignComponent},
 {path:'home',
-component:HomeComponent}]
+component:HomeComponent},
+{path:'like',
+component:LikedMessagesComponent},
+{path:'profile',
+component:ProfileComponent}]
 
 @NgModule({
   declarations: [
@@ -27,7 +33,9 @@ component:HomeComponent}]
     AnonComponent,
     SignComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    LikedMessagesComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
