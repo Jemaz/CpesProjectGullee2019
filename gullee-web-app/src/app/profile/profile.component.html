@@ -3,10 +3,12 @@
       
       <form class="profile">
         <h1>Profile</h1>
-        <input [(ngModel)]="username" type="text" placeholder=" change username"/>
-        <input [(ngModel)]="password" type="password" placeholder="change password"/>
+        <input [(ngModel)]="usernameInput" type="text" placeholder=" change username" name="usernameInput"/>
+        <input [(ngModel)]="passwordInput" type="password" placeholder="change password" name="passwordInput"/>
         <button (click)="save()">save</button>
       </form>
+
     </div>
-    <div style="text-align:right"> <a routerLink="/sign"><button > logout</button></a></div> 
+    <div style="text-align:right"> 
+      <a routerLink="/sign"><button (click)="handleLogout()" > logout</button></a></div> 
   </div>

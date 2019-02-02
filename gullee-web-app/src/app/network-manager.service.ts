@@ -44,6 +44,14 @@ export class NetworkManagerService {
     return this.http.get("http://localhost:3000/api/users/" + id.toString() + "/messages", httpOptions);
   }
 
+  changeProfileInfo(postRequestJson: any){
+    return this.http.patch("http://localhost:3000/api/users/" + this.userIdLoggedIn.toString(), postRequestJson, httpOptions); 
+  }
+
+  handleLogout(){
+    this.userIdLoggedIn = null;
+  }
+
 
 }
 

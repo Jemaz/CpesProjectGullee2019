@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NetworkManagerService } from '../network-manager.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -6,13 +8,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-username:string
-password:string
-  constructor() { }
+  usernameInput:string
+  passwordInput:string
+
+  constructor(private networkMangerService: NetworkManagerService, private router: Router) { }
 
   ngOnInit() {
   }
-save(){
-  
-}
+
+  save(){
+
+    var requestJson = 
+    {
+      username: this.usernameInput,
+      password: this.passwordInput
+    }
+
+    this.networkMangerService.changeProfileInfo(requestJson).subscribe()
+
+
+
+  }
+
+  handleLogout(){
+    this.networkMangerService.handleLogout()
+
+    this.router.navigate(['/login']);
+  }
+
+
 }
