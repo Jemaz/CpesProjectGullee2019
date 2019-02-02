@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body  style="text-align:center" bgcolor="#8DC26F">
+<div *ngIf="!done">
+<h2 style="text-align:center">
+  write a message:
+</h2>
+
+
+<textarea [(ngModel)]="message" rows="4" cols="50"> </textarea>
+<br> 
+  <button   (click)="submitm()" type="submit">Gullee</button> 
+</div>
+<div *ngIf="done">
+
+<h1>Thanks! </h1>
+
+
+</div>
+</body>
+</html>
+
+
+
+
+  
+
+  

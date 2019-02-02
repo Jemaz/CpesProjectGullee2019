@@ -1,14 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import{FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
+import { AnonComponent } from './anon/anon.component';
+import { RouterModule } from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { SignComponent } from './sign/sign.component';
+import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
+
+export const routs=[
+  {
+    path:'write',
+    component: AnonComponent
+  },
+{path:'signup',
+component:SignupComponent},
+{path:'login',
+component:SignComponent},
+{path:'home',
+component:HomeComponent}]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AnonComponent,
+    SignComponent,
+    SignupComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routs),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
