@@ -8,18 +8,25 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SignComponent } from './sign/sign.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
-export const routs=[
+export const routs = [
   {
-    path:'write',
+    path: 'write',
     component: AnonComponent
   },
-{path:'signup',
-component:SignupComponent},
-{path:'login',
-component:SignComponent},
-{path:'home',
-component:HomeComponent}]
+  {
+    path: 'signup',
+    component: SignupComponent
+  },
+  {
+    path: 'login',
+    component: SignComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  }]
 
 @NgModule({
   declarations: [
@@ -33,7 +40,8 @@ component:HomeComponent}]
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routs),
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

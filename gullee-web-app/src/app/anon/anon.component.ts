@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NetworkManagerService } from '../network-manager.service';
 
 @Component({
   selector: 'app-anon',
@@ -8,13 +9,27 @@ import { Component, OnInit } from '@angular/core';
 export class AnonComponent implements OnInit {
   message:string
   done:boolean=false
-  constructor() { }
+  constructor(private networkManagerService: NetworkManagerService) { }
 
   ngOnInit() {
+    this.networkManagerService.testFunc();
   }
   submitm(){
     this.done=true
-/////////////////////////send message to DB 
+
+
+  //writing to message table
+
+  var requestJson = 
+  {
+    "message": "test mssg from angular",
+    "is_liked": 1
+  }
+
+  this.networkManagerService.anonWriteMessage(requestJson).subscribe();
+
+
+
 
   }
 }
