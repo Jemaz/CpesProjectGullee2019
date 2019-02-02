@@ -36,5 +36,10 @@ Messages=[];
     })
 
   }
+like(){
+////////////////liked msg
+}
+deleted(){}
+
 
 }

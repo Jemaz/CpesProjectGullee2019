@@ -1,0 +1,12 @@
+<div class="login-page">
+    <div class="form">
+      
+      <form class="profile">
+        <h1>Profile</h1>
+        <input [(ngModel)]="username" type="text" placeholder=" change username"/>
+        <input [(ngModel)]="password" type="password" placeholder="change password"/>
+        <button (click)="save()">save</button>
+      </form>
+    </div>
+    <div style="text-align:right"> <a routerLink="/sign"><button > logout</button></a></div> 
+  </div>

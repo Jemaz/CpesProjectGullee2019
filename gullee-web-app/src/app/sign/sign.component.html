@@ -4,8 +4,9 @@
     <form class="login-form">
       <input [(ngModel)]="usernameStr" type="text" placeholder="username" name="usernameStr"/>
       <input [(ngModel)]="passwordStr" type="password" placeholder="password" name="passwordStr"/>
-      <button (click)='handleLoginIn()'>login</button>
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
+      
+      <a (click)='handleLoginIn()'><button>login</button></a>
+      <p class="message">Not registered? <a href="/signup">Create an account</a></p>
     </form>
   </div>
 </div>

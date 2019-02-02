@@ -9,24 +9,24 @@ import { SignComponent } from './sign/sign.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LikedMessagesComponent } from './liked-messages/liked-messages.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const routs = [
   {
     path: 'write',
     component: AnonComponent
   },
-  {
-    path: 'signup',
-    component: SignupComponent
-  },
-  {
-    path: 'login',
-    component: SignComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  }]
+{path:'signup',
+component:SignupComponent},
+{path:'login',
+component:SignComponent},
+{path:'home',
+component:HomeComponent},
+{path:'like',
+component:LikedMessagesComponent},
+{path:'profile',
+component:ProfileComponent}]
 
 @NgModule({
   declarations: [
@@ -34,7 +34,9 @@ export const routs = [
     AnonComponent,
     SignComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    LikedMessagesComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
